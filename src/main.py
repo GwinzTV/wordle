@@ -48,7 +48,7 @@ def main():
     play_again = ""
     while play_again != 'q':
         print_menu()
-        word = read_random_word()
+        word = read_random_word().lower()
 
         for attempt in range(1, 7):
             guess = get_five_characters().lower()
