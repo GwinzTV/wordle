@@ -5,7 +5,7 @@ from termcolor import colored
 from config import FILEPATH
 from text import won, lost, replay
 
-############# views ##############
+# views ##############
 
 
 def print_menu():
@@ -40,7 +40,7 @@ def get_five_characters():
             exit()
     return user_input
 
-################ Main Function ################
+# Main Function ################
 
 
 def main():
