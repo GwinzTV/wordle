@@ -71,6 +71,14 @@ def main():
                 lost_game = True
         if lost_game:
             print(lost())
+            for i in range(5):
+                print("The wordle was." + i*".")
+                time.sleep(1)
+                sys.stdout.write('\x1b[1A')
+                sys.stdout.write('\x1b[2K')
+            print(f"\nThe wordle was {word}")
+            time.sleep(2)
+
         play_again = input(replay())
 
 
