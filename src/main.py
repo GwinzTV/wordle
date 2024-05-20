@@ -3,7 +3,7 @@ import time
 import sys
 from termcolor import colored
 from config import FILEPATH
-from text import won, lost, replay
+from text import won, lost, replay, title
 
 # views ##############
 
@@ -46,6 +46,7 @@ def get_five_characters():
 def main():
     lost_game = False
     play_again = ""
+    print(title())
     while play_again != 'q':
         print_menu()
         word = read_random_word().lower()
