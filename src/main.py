@@ -76,7 +76,7 @@ def main():
                 time.sleep(1)
                 sys.stdout.write('\x1b[1A')
                 sys.stdout.write('\x1b[2K')
-            print(f"\nThe wordle was {word}")
+            print(f"The wordle was {word}")
             time.sleep(2)
 
         play_again = input(replay())

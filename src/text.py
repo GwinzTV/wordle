@@ -4,7 +4,7 @@ def won(attempt):
 
 
 def lost():
-    text = "Unlucky, you did not solve the Wordle this time around!"
+    text = "Unlucky, you did not solve the Wordle this time around!\n"
     return text
 
 
