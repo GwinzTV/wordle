@@ -1,3 +1,5 @@
+
+
 def won(attempt):
     text = f"\nCongrats! You got the Wordle in {attempt} tries"
     return text
@@ -14,10 +16,10 @@ def replay():
     return text
 
 
-def title():
-    text = r'''
+def title(text):
+    text = fr'''
 ================================================================
-|   Welcome to ...                                             |
+|   {text}                                          |
 |                                                              |
 |   $$\      $$\                           $$\ $$\             |
 |   $$ | $\  $$ |                          $$ |$$ |            |
@@ -32,3 +34,14 @@ def title():
 ================================================================
 '''
     return text
+
+
+def boxes(lst):
+    _box = fr'''
+._____.  ._____.  ._____.  ._____.  ._____.
+|     |  |     |  |     |  |     |  |     |
+|  {lst[0]}  |  |  {lst[1]}  |  |  {lst[2]}  |  |  {lst[3]}  |  |  {lst[4]}  |
+|     |  |     |  |     |  |     |  |     |
+'-----'  '-----'  '-----'  '-----'  '-----'
+'''
+    return _box

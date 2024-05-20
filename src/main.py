@@ -1,9 +1,9 @@
 import random
 import time
-import sys
 from termcolor import colored
+import sys
 from config import FILEPATH
-from text import won, lost, replay, title
+from text import won, lost, replay, title, boxes
 
 # views ##############
 
@@ -46,25 +46,26 @@ def get_five_characters():
 def main():
     lost_game = False
     play_again = ""
-    print(title())
+    print(title("Welcome to ......."))
     while play_again != 'q':
         print_menu()
         word = read_random_word().lower()
 
         for attempt in range(1, 7):
             guess = get_five_characters().lower()
+            temp = []
 
             sys.stdout.write('\x1b[1A')
             sys.stdout.write('\x1b[2K')
 
             for i in range(5):
                 if guess[i] == word[i]:
-                    print(colored(guess[i], 'green'), end="")
+                    temp.append(colored(guess[i], 'green'))
                 elif guess[i] in word:
-                    print(colored(guess[i], 'yellow'), end="")
+                    temp.append(colored(guess[i], 'yellow'))
                 else:
-                    print(guess[i], end="")
-            print()
+                    temp.append(colored(guess[i], 'white'))
+            print(boxes(temp))
             if guess == word:
                 print(colored(won(attempt), 'red'))
                 break
@@ -81,6 +82,7 @@ def main():
             time.sleep(2)
 
         play_again = input(replay())
+    print(title("Thanks for playing"))
 
 
 if __name__ == "__main__":
