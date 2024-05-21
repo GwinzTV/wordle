@@ -47,7 +47,7 @@ def main():
     lost_game = False
     play_again = ""
     print(title("Welcome to ......."))
-    while play_again != 'q':
+    while 'q' not in play_again:
         print_menu()
         word = read_random_word().lower()
 
