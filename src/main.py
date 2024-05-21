@@ -69,7 +69,7 @@ def main():
             if guess == word:
                 print(colored(won(attempt), 'red'))
                 break
-            if attempt == 6:
+            if guess != word and attempt == 6:
                 lost_game = True
         if lost_game:
             print(lost())
